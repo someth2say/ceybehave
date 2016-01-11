@@ -38,5 +38,4 @@ install: sudo apt-get install ceylon-1.2.0
 
 script: 
   - ceylon compile
-  - ceylon test --test=org.someth2say.ceybehave::simpleTest org.someth2say.ceybehave/1.0.0
-  - ceylon test --test=org.someth2say.ceybehave::negativeTest org.someth2say.ceybehave/1.0.0
+  - ceylon test org.someth2say.ceybehave/1.0.0
