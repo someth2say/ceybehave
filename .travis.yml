@@ -1,0 +1,36 @@
+language: java
+
+sudo: false
+
+os:
+  - linux
+
+jdk:
+#  - openjdk7
+  - oraclejdk8
+
+#env:
+#  global:
+#    - JAVA_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
+#    - MALLOC_ARENA_MAX=2
+
+branches:
+  only:
+    - master
+    
+before_install:
+  - wget -O - https://downloads.ceylon-lang.org/apt/ceylon-debian-repo.gpg.key | sudo apt-key add -
+  - add-apt-repository "deb https://downloads.ceylon-lang.org/apt/ unstable main"
+  - apt-get update
+
+install: apt-get install ceylon-1.2.0
+
+#before_script:
+#  - export MAVEN_SKIP_RC=true
+#  - export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=512m"
+#  - unset GEM_PATH GEM_HOME IRBRC JRUBY_OPTS
+#  - "export PATH=`pwd`/bin:$PATH"
+#  - echo $HOME
+
+script: ceylon test org.someth2say.ceybehave/1.0.0
+
