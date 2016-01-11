@@ -20,7 +20,7 @@ branches:
     - master
     
 before_install:
-  - wget -O - https://downloads.ceylon-lang.org/apt/ceylon-debian-repo.gpg.key | sudo apt-key add
+  - wget -O - https://downloads.ceylon-lang.org/apt/ceylon-debian-repo.gpg.key | sudo apt-key add -
   - sudo add-apt-repository "deb https://downloads.ceylon-lang.org/apt/ unstable main"
   - sudo apt-get update
 
