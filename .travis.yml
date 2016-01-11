@@ -23,7 +23,7 @@ before_install:
   - wget -O - https://downloads.ceylon-lang.org/apt/ceylon-debian-repo.gpg.key | sudo apt-key add -
   - sudo add-apt-repository "deb https://downloads.ceylon-lang.org/apt/ unstable main"
 # - echo "deb https://downloads.ceylon-lang.org/apt/dists/unstable/Release/ precise ceylon-1.2.0" | sudo tee -a /etc/apt/sources.list
-  - echo "deb https://downloads.ceylon-lang.org/apt/ precise ceylon-1.2.0" | sudo tee -a /etc/apt/sources.list
+  - echo "deb https://downloads.ceylon-lang.org/apt/ unstable ceylon-1.2.0" | sudo tee -a /etc/apt/sources.list
   - sudo apt-get update -qq
 
 install: sudo apt-get install ceylon-1.2.0
