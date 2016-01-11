@@ -36,5 +36,5 @@ install: sudo apt-get install ceylon-1.2.0
 #  - "export PATH=`pwd`/bin:$PATH"
 #  - echo $HOME
 
-script: ceylon test org.someth2say.ceybehave/1.0.0
+script: ceylon test -compile=force org.someth2say.ceybehave/1.0.0
 
