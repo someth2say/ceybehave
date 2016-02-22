@@ -27,7 +27,7 @@ before_install:
   - cat /etc/apt/sources.list
   - sudo apt-get update -qq
 
-install: sudo apt-get install ceylon-1.2.0
+install: sudo apt-get install ceylon-1.2.1
 
 #before_script:
 #  - export MAVEN_SKIP_RC=true
